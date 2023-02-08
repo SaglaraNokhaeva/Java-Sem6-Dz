@@ -1,12 +1,6 @@
 // Подумать над структурой класса Ноутбук для магазина техники - выделить поля и методы. Реализовать в java.
 // Создать множество ноутбуков.
 // Написать метод, который будет запрашивать у пользователя критерий фильтрации и выведет ноутбуки, отвечающие фильтру. Критерии фильтрации можно хранить в Map.
-// NoteBook notebook1 = new NoteBook
-// NoteBook notebook2 = new NoteBook
-// NoteBook notebook3 = new NoteBook
-// NoteBook notebook4 = new NoteBook
-// NoteBook notebook5 = new NoteBook
-
 // Например: “Введите цифру, соответствующую необходимому критерию:
 // 1 - ОЗУ
 // 2 - Объем ЖД
@@ -36,6 +30,10 @@ public class task1 {
         Notebook notebook7 = new Notebook(16, 512, "linux", "grey");
         Notebook notebook8 = new Notebook(16, 512, "linux", "grey");
         Notebook notebook9 = new Notebook(16, 256, "windows", "black");
+
+        System.out.println("Добро пожаловать в NotebookMarket!");
+        System.out.println(notebook1.get_ram_memory());
+
 
         
 
