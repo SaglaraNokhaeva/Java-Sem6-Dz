@@ -39,6 +39,8 @@ public class task1 {
                 "Пожалуйста, выберите интересующий параметр выбора: '1' - ОП, '2' - жёсткий диск,'3' - ОС,'4' - цвет");
         Integer selection = scan.nextInt();
         if (selection==1){
+            System.out.println("Введите интересующий объём ОП (4, 8 или 16): ");
+            Integer select_op = scan.nextInt();
 
         }
         if (selection==2){
