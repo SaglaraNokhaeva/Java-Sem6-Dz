@@ -1,5 +1,5 @@
 class Notebook {    
-    
+
     Integer ram_memory;
     Integer hard_drive;
     String os;
@@ -10,15 +10,6 @@ class Notebook {
         this.hard_drive = j;
         this.os = string1;
         this.colour = string2;
-
-
-    // this.registered = true;
-    // this.nameMaster = master;
-    // this.telephone = getPhone;
-    // this.name = petName;
-    // this.sex = petSex;
-    // this.breed = petBreed;
-    // this.age = petAge;
     }
 
     public Integer get_ram_memory() {
