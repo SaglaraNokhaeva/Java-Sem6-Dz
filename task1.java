@@ -61,7 +61,7 @@ public class task1 {
         }
         
 
-        System.out.println(notebook1.get_ram_memory());
+        // System.out.println(notebook1.get_ram_memory());
 
         scan.close();
     }
