@@ -11,9 +11,12 @@ class Notebook {
         this.os = string1;
         this.colour = string2;
     }
-
     public Integer get_ram_memory() {
         return this.ram_memory;
     }
+    // public void () {
+       
+        
+    // }
 
 }
