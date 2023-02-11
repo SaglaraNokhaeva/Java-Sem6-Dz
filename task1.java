@@ -19,6 +19,8 @@
 // вывод подходящих
 
 import java.util.Scanner;
+import java.util.HashMap;
+import java.util.Map;
 
 public class task1 {
     public static void main(String[] args) {
@@ -32,38 +34,53 @@ public class task1 {
         Notebook notebook7 = new Notebook(16, 512, "linux", "grey");
         Notebook notebook8 = new Notebook(16, 512, "linux", "grey");
         Notebook notebook9 = new Notebook(16, 256, "windows", "black");
+        Map<Integer, Notebook> db = new HashMap<>();
+        db.put(1, notebook1);
+        db.put(2, notebook2);
+        db.put(3, notebook3);
+        db.put(4, notebook4);
+        db.put(5, notebook5);
+        db.put(6, notebook6);
+        db.put(7, notebook7);
+        db.put(8, notebook8);
+        db.put(9, notebook9);
 
         Scanner scan = new Scanner(System.in);
         System.out.println("Добро пожаловать в NotebookMarket!");
         System.out.println(
                 "Пожалуйста, выберите интересующий параметр выбора: '1' - ОП, '2' - жёсткий диск,'3' - ОС,'4' - цвет");
         Integer selection = scan.nextInt();
-        if (selection==1){
+        if (selection == 1) {
             System.out.println("Введите интересующий объём ОП ('1' - 4ГБ ;'2' - 8Гб ;'3' - 16ГБ): ");
             Integer select_op = scan.nextInt();
-             
+            for (int str : db.keySet()) {
+                db.get(str).filter_rm(select_op);
+            }
         }
-        if (selection==2){
+
+        if (selection == 2) {
             System.out.println("Введите интересующий объём жёсткого диска ('1' - 128ГБ;'2' - 256ГБ;'3' - 512ГБ): ");
             Integer select_op = scan.nextInt();
-
+            for (int str : db.keySet()) {
+                db.get(str).filter_hd(select_op);
+            }
         }
-        if (selection==3){
+
+        if (selection == 3) {
             System.out.println("Введите интересующую ОС ('1' - windows;'2' - linux): ");
-            String select_op = scan.nextLine();
-
+            Integer select_op = scan.nextInt();
+            for (int str : db.keySet()) {
+                db.get(str).filter_os(select_op);
+            }
 
         }
-        if (selection==4){
+        if (selection == 4) {
             System.out.println("Введите интересующий цвет ('1' - белый;'2' - чёрный;'3' - серый): ");
-            String select_op = scan.nextLine();
-
+            Integer select_op = scan.nextInt();
+            for (int str : db.keySet()) {
+                db.get(str).filter_cl(select_op);
+            }
         }
-        
-
-        // System.out.println(notebook1.get_ram_memory());
-
         scan.close();
     }
-
 }
